@@ -1,0 +1,20 @@
+Table User{
+id int [pk]
+fname VARCHAR
+lname VARCHAR
+email VARCHAR
+dob date
+passWord VARCHAR
+createAt date
+updateAt date
+}
+
+Table Blog{
+id int [pk]
+title VARCHAR
+content VARCHAR
+createAt date
+updateAt date
+userid int [ref : > User.id]
+is_deleted boolen
+}
